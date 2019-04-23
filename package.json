@@ -1,0 +1,33 @@
+{
+  "name": "chain-timeout",
+  "version": "1.0.0",
+  "description": "Execute Chained Timeout functions using requestAnimationFrame ",
+  "main": "dist/chain-timeout.js",
+  "umd:main": "dist/chain-timeout.min.js",
+  "module": "dist/chain-timeout.mjs",
+  "unpkg": "dist/chain-timeout.min.js",
+  "source": "src/index.js",
+  "files": [
+      "dist",
+      "src"
+  ],
+  "scripts": {
+    "start": "http-server example --silent -o & npm run dev",
+    "dev": "microbundle watch --format umd --entry example/src/index.js --output example/dist/bundle.js",
+    "build": "microbundle --name chain-timeout --format es,cjs,umd --sourcemap false",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "chain",
+    "setTimeout",
+    "timeout",
+    "requestAnimationFrame",
+    "chainable"
+  ],
+  "author": "Jorge Moreno @alterebro (moro.es)",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^0.11.1",
+    "microbundle": "^0.11.0"
+  }
+}
