@@ -8,8 +8,8 @@
   "unpkg": "dist/chain-timeout.min.js",
   "source": "src/index.js",
   "files": [
-      "dist",
-      "src"
+    "dist",
+    "src"
   ],
   "scripts": {
     "start": "http-server example --silent -o & npm run dev",
