@@ -15,7 +15,8 @@
     "start": "http-server example --silent -o & npm run dev",
     "dev": "microbundle watch --format umd --entry example/src/index.js --output example/dist/bundle.js",
     "build": "microbundle --name chain-timeout --format es,cjs,umd --sourcemap false",
-    "prepare": "npm run build"
+    "prepare": "npm run build",
+    "postversion": "git push && git push --tags && npm publish"
   },
   "keywords": [
     "chain",
