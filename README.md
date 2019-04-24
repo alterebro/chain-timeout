@@ -7,7 +7,7 @@
 
 # chain-timeout
 
-**Execute chained setTimeout functions using requestAnimationFrame to improve performance**. <br>By using `requestAnimationFrame` the timeout defined will only get executed when the browser is active, if the browser tab is on the background the script won't be running so the performance increase and battery life is saved :)
+**Execute chained setTimeout functions using requestAnimationFrame to improve performance**. <br>By using `requestAnimationFrame` the timeout defined will only run when the document is active, if the document browser or tab is placed on background the script won't be executed therefore performance will not be affected and battery life will be saved :)
 
 
 ## Install
@@ -34,7 +34,8 @@ import chainTimeout from 'chain-timeout'
 const chainTimeout = require('chain-timeout');
 ```
 
-To use it on the browser include the UMD minified file ( `dist/chain-timeout.min.js` ). You can also add the script directly from [unpkg.com](https://unpkg.com/chain-timeout):
+To use it on the browser include the UMD minified file ( `dist/chain-timeout.min.js` ).
+You can also add the script directly from [unpkg.com](https://unpkg.com/chain-timeout):
 
 ```html
 <script src="https://unpkg.com/chain-timeout"></script>
@@ -43,7 +44,7 @@ To use it on the browser include the UMD minified file ( `dist/chain-timeout.min
 
 ## Usage
 
-Include it and create a chain :
+Include it and create a *chain* :
 
 ```javascript
 import chainTimeout from 'chain-timeout';
