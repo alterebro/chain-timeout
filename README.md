@@ -2,12 +2,19 @@
     <img src="static/chain-timeout.png" alt="chain-timeout" width="175" />
 </p>
 
+[![MIT license](https://img.shields.io/github/license/alterebro/chain-timeout.svg)](https://github.com/alterebro/chain-timeout/blob/master/LICENSE) [![NPM Version](https://img.shields.io/npm/v/chain-timeout.svg)](https://www.npmjs.com/package/chain-timeout) [![gzip File Size](http://img.badgesize.io/https://unpkg.com/chain-timeout/dist/chain-timeout.min.js?compression=gzip)](https://unpkg.com/chain-timeout/dist/chain-timeout.min.js) [![Twitter Follow](https://img.shields.io/twitter/follow/alterebro.svg?color=%2338A1F3&style=popout)](https://twitter.com/alterebro)
+
+
 # chain-timeout
 
 **Execute chained setTimeout functions using requestAnimationFrame to improve performance**. <br>By using `requestAnimationFrame` the timeout defined will only get executed when the browser is active, if the browser tab is on the background the script won't be running so the performance increase and battery life is saved :)
 
 
 ## Install
+
+```sh
+$ npm install chain-timeout
+```
 
 This module is available in three flavours:
 
@@ -27,10 +34,10 @@ import chainTimeout from 'chain-timeout'
 const chainTimeout = require('chain-timeout');
 ```
 
-To use it on the browser include the UMD minified file ( `dist/chain-timeout.min.js` )
+To use it on the browser include the UMD minified file ( `dist/chain-timeout.min.js` ). You can also add the script directly from [unpkg.com](https://unpkg.com/chain-timeout):
 
 ```html
-<script src="your-path-to/chain-timeout.min.js"></script>
+<script src="https://unpkg.com/chain-timeout"></script>
 ```
 
 
@@ -40,6 +47,7 @@ Include it and create a chain :
 
 ```javascript
 import chainTimeout from 'chain-timeout';
+
 const chain = chainTimeout( fn, delay ).chainTimeout( fn, delay )...
 ```
 

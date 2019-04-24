@@ -5,7 +5,7 @@ export default function chainTimeout(fn, t) {
 		let start = new Date().getTime();
 		let handle = null;
 		let loop = () => { ( (new Date().getTime() - start) >= delay ) ? func.call() : handle = requestAnimationFrame(loop) };
-		    handle = requestAnimationFrame(loop);
+			handle = requestAnimationFrame(loop);
 		return handle;
 	}
 
@@ -13,28 +13,28 @@ export default function chainTimeout(fn, t) {
 	let self = null;
 	let timer = null;
 
-    function schedule(fn, t) {
+	function schedule(fn, t) {
 		timer = requestTimeout( function() {
 			timer = null;
 			fn.call();
-		    if (queue.length) {
-                let item = queue.shift();
-                schedule(item.fn, item.t);
-            }
+			if (queue.length) {
+				let item = queue.shift();
+				schedule(item.fn, item.t);
+			}
 		}, t);
-    }
+	}
 
-    self = {
-        chainTimeout: function(fn, t) {
+	self = {
+		chainTimeout: function(fn, t) {
 			(queue.length || timer) ? queue.push({fn: fn, t: t}) : schedule(fn, t);
-            return self;
+			return self;
         },
-        clear: function() {
+		clear: function() {
 			cancelAnimationFrame(timer);
-            queue = [];
-            return self;
-        }
-    };
+			queue = [];
+			return self;
+		}
+	};
 
-    return self.chainTimeout(fn, t);
+	return self.chainTimeout(fn, t);
 }
