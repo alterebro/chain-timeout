@@ -18,15 +18,25 @@
     "prepare": "npm run build",
     "postversion": "git push && git push --tags && npm publish"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alterebro/chain-timeout.git"
+  },
   "keywords": [
     "chain",
     "setTimeout",
     "timeout",
     "requestAnimationFrame",
-    "chainable"
+    "chainable",
+    "delay",
+    "queue"
   ],
   "author": "Jorge Moreno @alterebro (moro.es)",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alterebro/chain-timeout/issues"
+  },
+  "homepage": "https://github.com/alterebro/chain-timeout#readme",
   "devDependencies": {
     "http-server": "^0.11.1",
     "microbundle": "^0.11.0"

@@ -21,7 +21,7 @@ let _end = null;
 
 // --------------------------
 // Some chaininig...
-let chain = chainTimeout( () => msg('-----------------', `starting at ${_start}`), 0 )
+const chain = chainTimeout( () => msg('-----------------', `starting at ${_start}`), 0 )
     .chainTimeout( () => msg('I am chaining, aren\'t I?'), 2500 )
     .chainTimeout( () => {
 
@@ -41,3 +41,6 @@ let chain = chainTimeout( () => msg('-----------------', `starting at ${_start}`
         msg(`stopping at ${new Date().getTime()} (${((_end - _start)/1000).toFixed(2)}s)`, '-----------------');
 
     }, 2500 );
+
+
+console.log(chain);    
