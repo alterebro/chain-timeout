@@ -1,6 +1,6 @@
 {
   "name": "chain-timeout",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Execute Chained Timeout functions using requestAnimationFrame",
   "main": "dist/chain-timeout.js",
   "umd:main": "dist/chain-timeout.min.js",
